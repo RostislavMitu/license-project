@@ -1,0 +1,19 @@
+{
+  "name": "license-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RostislavMitu/license-project.git"
+  },
+  "author": "Mitu Rostislav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RostislavMitu/license-project/issues"
+  },
+  "homepage": "https://github.com/RostislavMitu/license-project#readme"
+}
