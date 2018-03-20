@@ -1,21 +1,5 @@
-import path from 'path';
+import config from './webpack.config';
 
-export default {
-  mode: 'development',
-  devtool: 'inline-source-map',
-  entry: path.resolve(__dirname, 'src/index'),
-  target: 'web',
-  output: {
-    path: path.resolve(__dirname, 'src'),
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        use: 'babel-loader',
-      }
-    ]
-  }
-}
+export default Object.assign({}, config, {
+  mode: 'development'
+});
