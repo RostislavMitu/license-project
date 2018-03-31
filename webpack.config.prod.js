@@ -1,6 +1,5 @@
 import config from './webpack.config';
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+import path from 'path';
 
 export default Object.assign({}, config, {
   mode: 'production',
@@ -9,11 +8,5 @@ export default Object.assign({}, config, {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: true
-    })
-  ]
+  }
 });
