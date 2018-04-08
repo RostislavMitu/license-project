@@ -3,7 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   devtool: 'inline-source-map',
-  entry: path.resolve(__dirname, 'src/index'),
+  entry: path.resolve(__dirname, 'src/js/index'),
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'src'),
@@ -24,7 +24,7 @@ export default {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'src/views/index.html',
       inject: true
     })
   ]
