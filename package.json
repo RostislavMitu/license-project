@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "babel-node buildScripts/startMessage.js",
+    "prestart": "babel-node src/backend/buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
-    "open:src": "babel-node buildScripts/srcServer.js",
+    "open:src": "babel-node src/backend/buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
@@ -17,8 +17,8 @@
     "test:watch": "jest --watch",
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean-dist run-test lint",
-    "build": "babel-node buildScripts/build.js",
-    "postbuild": "babel-node buildScripts/distServer.js"
+    "build": "babel-node src/backend/buildScripts/build.js",
+    "postbuild": "babel-node src/backend/buildScripts/distServer.js"
   },
   "repository": {
     "type": "git",

@@ -7,16 +7,14 @@ import session from 'express-session';
 import flash from 'connect-flash';
 import webpack from 'webpack';
 import passport from 'passport';
-import setUpPassport from './setuppassport';
+import setUpPassport from '../config/passport';
 import routes from './routes';
-import config from './webpack.config.dev';
+import config from '../../../webpack.config.dev';
 
-//https://github.com/EvanHahn/Express.js-in-Action-code/tree/master/Chapter_08/learn-about-me
-
-const  app = express();
+const app = express();
 const compiler = webpack(config);
 
-mongoose.connect('mongodb://localhost:27017/test');
+mongoose.connect('mongodb://Rostislav:LicensePassword123@ds239309.mlab.com:39309/license_db');
 
 setUpPassport();
 

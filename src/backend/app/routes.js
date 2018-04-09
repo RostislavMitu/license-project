@@ -39,16 +39,12 @@ router.use('/graphql', graphqlHTTP({
   graphiql: true
 }));
 
-// router.get('/', function(req, res) {
-//   res.sendFile(path.join(__dirname + '/src/views/index.html'));
-// });
-
 router.get('/signup', function(req, res) {
-  res.sendFile(path.join(__dirname + '/src/views/signup.html'));
+  res.sendFile(path.resolve(__dirname, '../../views/signup.html'));
 });
 
 router.get('/login', function(req, res) {
-  res.sendFile(path.join(__dirname + '/src/views/login.html'));
+  res.sendFile(path.resolve(__dirname, '../../views/login.html'));
 });
 
 router.post('/signup', passport.authenticate('signup', {
@@ -62,5 +58,10 @@ router.post('/login', passport.authenticate('login', {
   failureRedirect : '/login',
   failureFlash : true
 }));
+
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
+});
 
 export default router;

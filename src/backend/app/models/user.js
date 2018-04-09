@@ -7,6 +7,9 @@ const userSchema = mongoose.Schema({
   lastName: { type: String, required: true, unique: false },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  age: { type: Number, min: 18, max: 65, required: true },
+  rentedApartemnts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Apartment' }],
+  apartments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Apartment' }],
   createdAt: {type: Date, default: Date.now}
 });
 

@@ -1,5 +1,5 @@
 import open from 'open';
-import app from '../app';
+import app from '../app/app';
 
 /* eslint-disable no-console */
 
