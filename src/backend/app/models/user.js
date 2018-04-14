@@ -23,7 +23,6 @@ userSchema.methods.checkPassword = function(guess, done) {
   });
 };
 
-const noop = function() {};
 userSchema.pre('save', function(done) {
   const user = this;
   if (!user.isModified('password')) {
@@ -31,7 +30,7 @@ userSchema.pre('save', function(done) {
   }
   bcrypt.genSalt(SALT_FACTOR, function(err, salt) {
     if (err) { return done(err); }
-    bcrypt.hash(user.password, salt, noop, function(err, hashedPassword) {
+    bcrypt.hash(user.password, salt, null, function(err, hashedPassword) {
       if (err) { return done(err); }
       user.password = hashedPassword;
       done();
