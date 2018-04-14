@@ -8,7 +8,7 @@ const apartmentSchema = mongoose.Schema({
   rules: { type: Array },
   accessibility: { type: Array },
   description: { type: String },
-  owner: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+  owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   createdAt: { type: Date, default: Date.now }
 });
 

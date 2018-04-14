@@ -9,6 +9,7 @@
     "open:src": "babel-node src/backend/buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
+    "reinit": "babel-node src/backend/sampleData/users.js && babel-node src/backend/sampleData/apartments.js",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel open:src localtunnel",
