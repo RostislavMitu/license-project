@@ -1,3 +1,9 @@
-h2 {
+@import 'breakpoints';
+
+body {
   background: red;
+
+  @include for-tablet-portrait-up {
+    background: white;
+  }
 }
