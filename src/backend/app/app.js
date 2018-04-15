@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
-import { bodyParserGraphQL } from 'body-parser-graphql'
+import { bodyParserGraphQL } from 'body-parser-graphql';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import flash from 'connect-flash';
