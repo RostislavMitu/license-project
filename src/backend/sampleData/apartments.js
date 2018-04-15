@@ -42,7 +42,7 @@ Apartment.remove({}, function() {
       }
     ];
 
-    sampleApartments.forEach((apartment) => {
+    sampleApartments.concat(sampleApartments).concat(sampleApartments).forEach((apartment) => {
       const newApartment = new Apartment(apartment);
       newApartment.save(function() {
         mongoose.connection.close();

@@ -29,31 +29,9 @@ const Apartments = () => (
         <div className="wrapper plp-wrapper large-3 medium-2 small-1">
           {
             data.apartments.map((apartment) => (
-              <div key={apartment.id}>
+              <div className="plp-item" key={apartment.id}>
                 ID: {apartment.id} <br/>
-                <div className="plp-wrapper-img">
-                  <img src={apartment.mainImg}/>
-                </div>
-              </div>
-            ))
-          }
-          {
-            data.apartments.map((apartment) => (
-              <div key={apartment.id}>
-                ID: {apartment.id} <br/>
-                <div className="plp-wrapper-img">
-                  <img src={apartment.mainImg}/>
-                </div>
-              </div>
-            ))
-          }
-          {
-            data.apartments.map((apartment) => (
-              <div key={apartment.id}>
-                ID: {apartment.id} <br/>
-                <div className="plp-wrapper-img">
-                  <img src={apartment.mainImg}/>
-                </div>
+                <img src={apartment.mainImg}/>
               </div>
             ))
           }
