@@ -1,4 +1,5 @@
 @import 'breakpoints';
+@import 'grid';
 
 body {
   background: red;
@@ -6,4 +7,13 @@ body {
   @include for-tablet-portrait-up {
     background: white;
   }
+}
+
+img {
+  width: 100%;
+}
+
+.plp-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }

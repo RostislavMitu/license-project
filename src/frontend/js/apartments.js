@@ -26,7 +26,23 @@ const Apartments = () => (
       if (loading) return 'Loading...';
       if (error) return `Error! ${error.message}`;
       return (
-        <div>
+        <div className="wrapper plp-wrapper large-3 medium-2 small-1">
+          {
+            data.apartments.map((apartment) => (
+              <div key={apartment.id}>
+                ID: {apartment.id} <br/>
+                <img src={apartment.mainImg}/>
+              </div>
+            ))
+          }
+          {
+            data.apartments.map((apartment) => (
+              <div key={apartment.id}>
+                ID: {apartment.id} <br/>
+                <img src={apartment.mainImg}/>
+              </div>
+            ))
+          }
           {
             data.apartments.map((apartment) => (
               <div key={apartment.id}>

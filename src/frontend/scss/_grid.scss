@@ -1,0 +1,79 @@
+.wrapper {
+  display: grid;
+
+  &.small-1 {
+    grid-template-columns: 1fr;
+  }
+
+  &.small-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.small-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.small-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.small-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &.small-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include for-tablet-portrait-up {
+    &.medium-1 {
+      grid-template-columns: 1fr;
+    }
+
+    &.medium-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.medium-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.medium-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.medium-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &.medium-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  @include for-desktop-up {
+    &.large-1 {
+      grid-template-columns: 1fr;
+    }
+
+    &.large-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.large-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.large-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.large-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    &.large-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
