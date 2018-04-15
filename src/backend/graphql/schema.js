@@ -1,8 +1,8 @@
 import {
   GraphQLSchema
 } from 'graphql';
-import userQuery from './queries/userQuery';
+import queries from './queries/queries';
 
 export default new GraphQLSchema({
-  query: userQuery
+  query: queries,
 });
