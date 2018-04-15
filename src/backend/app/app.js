@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
+import { bodyParserGraphQL } from 'body-parser-graphql'
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import flash from 'connect-flash';
@@ -25,7 +25,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParserGraphQL());
 app.use(cookieParser());
 app.use(session({
   secret: 'TKRv0IJs=HYqrvagQ#&!F!%V]Ww/4KiVs$s,<<MX',
