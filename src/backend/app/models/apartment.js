@@ -9,7 +9,8 @@ const apartmentSchema = mongoose.Schema({
   accessibility: { type: Array },
   description: { type: String },
   owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
+  mainImg: { type: String }
 });
 
 export default mongoose.model('Apartment', apartmentSchema);

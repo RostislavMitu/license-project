@@ -41,6 +41,9 @@ export default new GraphQLObjectType({
       },
       createdAt: {
         type: GraphQLString
+      },
+      mainImg: {
+        type: GraphQLString
       }
     };
   }

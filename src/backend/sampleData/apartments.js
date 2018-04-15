@@ -15,7 +15,8 @@ Apartment.remove({}, function() {
         rules: ['No smoking', 'Not suitable for pets'],
         accessibility: [],
         description: 'Charming private house, well located with easy access.',
-        owner: users[0]._id
+        owner: users[0]._id,
+        mainImg: './apartmentsPhoto/samplePhoto1'
       }
     ];
 

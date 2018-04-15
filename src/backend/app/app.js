@@ -1,6 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
+import path from 'path';
 import { bodyParserGraphQL } from 'body-parser-graphql';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
@@ -25,6 +26,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
+app.use(express.static(path.resolve(__dirname, '../sampleData/apartmentsPhoto')));
 app.use(bodyParserGraphQL());
 app.use(cookieParser());
 app.use(session({
