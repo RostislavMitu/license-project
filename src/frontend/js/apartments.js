@@ -31,7 +31,9 @@ const Apartments = () => (
             data.apartments.map((apartment) => (
               <div key={apartment.id}>
                 ID: {apartment.id} <br/>
-                <img src={apartment.mainImg}/>
+                <div className="plp-wrapper-img">
+                  <img src={apartment.mainImg}/>
+                </div>
               </div>
             ))
           }
@@ -39,7 +41,9 @@ const Apartments = () => (
             data.apartments.map((apartment) => (
               <div key={apartment.id}>
                 ID: {apartment.id} <br/>
-                <img src={apartment.mainImg}/>
+                <div className="plp-wrapper-img">
+                  <img src={apartment.mainImg}/>
+                </div>
               </div>
             ))
           }
@@ -47,7 +51,9 @@ const Apartments = () => (
             data.apartments.map((apartment) => (
               <div key={apartment.id}>
                 ID: {apartment.id} <br/>
-                <img src={apartment.mainImg}/>
+                <div className="plp-wrapper-img">
+                  <img src={apartment.mainImg}/>
+                </div>
               </div>
             ))
           }
