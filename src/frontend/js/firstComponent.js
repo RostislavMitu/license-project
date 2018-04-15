@@ -1,7 +1,8 @@
 import React from 'react';
+import Apartments from './apartments';
 
 const FirstComponent = () => (
-  <div>Start from here. Test commit </div>
+  <Apartments/>
 );
 
 export default FirstComponent;
