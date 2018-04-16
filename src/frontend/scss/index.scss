@@ -18,10 +18,10 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     grid-auto-rows: 200px;
+    grid-gap: 10px;
   }
 
   &-item {
     overflow: hidden;
-    padding: 10px;
   }
 }
