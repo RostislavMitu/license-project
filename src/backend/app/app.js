@@ -26,6 +26,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
+app.use(express.static(path.resolve(__dirname, '../images')));
 app.use(express.static(path.resolve(__dirname, '../sampleData/apartmentsPhoto')));
 app.use(bodyParserGraphQL());
 app.use(cookieParser());
