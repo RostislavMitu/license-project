@@ -1,27 +1,16 @@
+@import '~normalize-scss/sass/normalize';
+@import '~typi/scss/typi';
+@import 'typi';
 @import 'breakpoints';
 @import 'grid';
+@import 'variables';
+@import 'modules/product-list';
 
-body {
-  background: red;
-
-  @include for-tablet-portrait-up {
-    background: white;
-  }
+.grey {
+  color: $grey;
 }
 
-img {
-  width: 100%;
-}
-
-.plp {
-  &-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    grid-auto-rows: 200px;
-    grid-gap: 10px;
-  }
-
-  &-item {
-    overflow: hidden;
-  }
+.center-content {
+  max-width: 1100px;
+  margin: 0 auto;
 }

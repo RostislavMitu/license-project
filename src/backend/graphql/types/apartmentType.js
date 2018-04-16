@@ -4,7 +4,6 @@ import {
   GraphQLID,
   GraphQLString,
   GraphQLInt,
-  GraphQLFloat,
   GraphQLList
 } from 'graphql';
 
@@ -25,7 +24,7 @@ export default new GraphQLObjectType({
         type: GraphQLList(GraphQLString)
       },
       price: {
-        type: GraphQLFloat
+        type: GraphQLString
       },
       rules: {
         type: GraphQLList(GraphQLString)

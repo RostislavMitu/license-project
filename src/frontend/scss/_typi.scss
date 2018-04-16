@@ -1,0 +1,30 @@
+$breakpoints: (
+  small: 600px,
+  medium: 900px,
+  large: 1200px,
+  xlarge: 1800px
+);
+
+$typi: (
+  base: (
+    null: (16px, 1.4)
+  ),
+  h1: (
+    null: ($h1-font-size),
+  ),
+  h2: (
+    null: ($h2-font-size),
+  ),
+  h3: (
+    null: ($h3-font-size),
+  ),
+  h4: (
+    null: ($h4-font-size),
+  ),
+  h5: (
+    null: ($h5-font-size),
+  ),
+  h6: (
+    null: ($h6-font-size),
+  )
+);
