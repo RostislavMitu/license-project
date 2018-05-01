@@ -4,6 +4,15 @@
 @import 'breakpoints';
 @import 'grid';
 @import 'variables';
+@import 'modules/header';
 @import 'modules/product-list';
 @import 'modules/modal';
 @import 'modules/login';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
