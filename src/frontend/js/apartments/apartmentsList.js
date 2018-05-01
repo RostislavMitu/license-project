@@ -22,7 +22,7 @@ const GET_APARTMENTS = gql`
 `;
 
 const ApartmentsList = () => (
-  <div className="center-content grey">
+  <div className="product-list">
     <h2>Homes around the world</h2>
     <Query query={GET_APARTMENTS}>
       {({ loading, error, data }) => {

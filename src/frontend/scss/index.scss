@@ -5,12 +5,5 @@
 @import 'grid';
 @import 'variables';
 @import 'modules/product-list';
-
-.grey {
-  color: $grey;
-}
-
-.center-content {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+@import 'modules/modal';
+@import 'modules/login';
