@@ -5,6 +5,10 @@
     grid-template-columns: 1fr;
   }
 
+  &.small-1-3 {
+    grid-template-columns: 1fr 3fr;
+  }
+
   &.small-2 {
     grid-template-columns: repeat(2, 1fr);
   }

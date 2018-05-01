@@ -1,7 +1,8 @@
 import {
   GraphQLList,
   GraphQLNonNull,
-  GraphQLID
+  GraphQLID,
+  GraphQLString
 } from 'graphql';
 import Apartment from '../../app/models/apartment';
 import apartmentType from '../types/apartmentType';
@@ -9,8 +10,18 @@ import apartmentType from '../types/apartmentType';
 export default {
   apartments: {
     type: new GraphQLList(apartmentType),
-    resolve: function () {
-      const apartments = Apartment.find().exec();
+    args: {
+      search: { type: GraphQLString },
+      city: { type: GraphQLString }
+    },
+    resolve: function (_, {
+      search = '',
+      city = ''
+    }) {
+      const apartments = Apartment.find({
+        title: { $regex : `.*${search}.*` },
+        city: { $regex : `.*${city}.*` }
+      }).exec();
       if (!apartments) {
         throw new Error('Error');
       }

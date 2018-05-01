@@ -1,11 +1,12 @@
 import React from 'react';
 import gql from 'graphql-tag';
+import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import Apartment from './apartment';
 
 const GET_APARTMENTS = gql`
-  {
-    apartments {
+  query apartments($search: String!, $city: String!) {
+    apartments(search: $search, city: $city) {
       id
       title,
       rooms,
@@ -21,10 +22,9 @@ const GET_APARTMENTS = gql`
   }
 `;
 
-const ApartmentsList = () => (
-  <div className="product-list">
-    <h2>Homes around the world</h2>
-    <Query query={GET_APARTMENTS}>
+const ApartmentsList = ({ searchQuery, city }) => (
+  <div>
+    <Query query={GET_APARTMENTS} variables={{ search: searchQuery, city }}>
       {({ loading, error, data }) => {
         if (loading) return 'Loading...';
         if (error) return `Error! ${error.message}`;
@@ -41,5 +41,10 @@ const ApartmentsList = () => (
     </Query>
   </div>
 );
+
+ApartmentsList.propTypes = {
+  searchQuery: PropTypes.string,
+  city: PropTypes.string
+};
 
 export default ApartmentsList;

@@ -1,13 +1,13 @@
 import React from 'react';
 import LoginButton from './components/loginButton/loginButton';
 import Header from './components/header/header';
-import ApartmentsList from './apartments/apartmentsList';
+import ApartmentsListPage from './apartments/apartmentsListPage';
 
 const App = () => (
   <div>
     <Header />
     {/*<LoginButton />*/}
-    <ApartmentsList />
+    <ApartmentsListPage />
   </div>
 );
 

@@ -9,6 +9,7 @@ Apartment.remove({}, function() {
     const sampleApartments = [
       {
         title: 'Apartment in center of Chisinau',
+        city: 'Chisinau',
         rooms: 4,
         amenities: ['Hair dryer', 'Kitchen', 'Wifi'],
         price: '$95 per night',
@@ -20,6 +21,7 @@ Apartment.remove({}, function() {
       },
       {
         title: 'Amazing and Extremely Central Flat',
+        city: 'Balti',
         rooms: 2,
         amenities: ['Wifi'],
         price: '$50 per night',
@@ -31,6 +33,7 @@ Apartment.remove({}, function() {
       },
       {
         title: '180° VIEW, PRIVATE POOL VILLA..',
+        city: 'Cricova',
         rooms: 1,
         amenities: ['Wifi'],
         price: '$200 per night',
