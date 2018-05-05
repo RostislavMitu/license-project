@@ -6,11 +6,11 @@ import schema from '../graphql/schema';
 
 const router = express.Router();
 
-router.use('/graphql', graphqlHTTP({
+router.use('/graphql', graphqlHTTP((req) => ({
   schema: schema,
-  rootValue: global,
+  context: { req },
   graphiql: true
-}));
+})));
 
 router.get('/signup', function(req, res) {
   res.sendFile(path.resolve(__dirname, '../../views/signup.html'));
