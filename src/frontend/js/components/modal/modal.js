@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Modal = ({ className, onCloseModal, children }) => (
   <div className="modal-overlay" onClick={onCloseModal}>
-    <div className={`modal ${className}`}>
+    <div className={`modal ${className}`} onClick={(event) => event.stopPropagation()}>
       {children}
     </div>
   </div>

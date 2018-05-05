@@ -7,7 +7,7 @@
 @import 'modules/header';
 @import 'modules/product-list';
 @import 'modules/modal';
-@import 'modules/login';
+@import 'modules/sign';
 
 html {
   font-size: 16px;
@@ -15,4 +15,14 @@ html {
 
 body {
   margin: 0;
+}
+
+.offscreen {
+  margin: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
 }

@@ -1,0 +1,68 @@
+.sign-modal {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.sign-form {
+  .input-wrapper {
+    margin: 10px 0;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 19px;
+    line-height: 24px;
+    color: rgb(72, 72, 72);
+    font-weight: 300;
+    border-style: solid;
+    border-color: rgb(219, 219, 219);
+    border-width: 1px;
+    padding: 11px;
+    box-sizing: border-box;
+
+    &.submit {
+      cursor: pointer;
+      font-size: 19px;
+      line-height: 22px;
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      border-radius: 4px;
+      border-width: 2px;
+      border-style: solid;
+      background: rgb(255, 90, 95);
+      border-color: transparent;
+    }
+  }
+
+  .styled-checkbox {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+      font-size: 19px;
+      line-height: 24px;
+      color: rgb(72, 72, 72);
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(219, 219, 219);
+      border-image: initial;
+      border-radius: 2px;
+    }
+
+    &:checked + label:before {
+      background: rgb(0, 132, 137);
+    }
+  }
+}

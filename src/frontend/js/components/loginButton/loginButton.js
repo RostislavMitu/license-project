@@ -24,13 +24,13 @@ class LoginButton extends React.Component {
   render() {
     const { isLoginOpen } = this.state;
     return (
-      <div>
-        <button onClick={this.openLoginForm}>Login</button>
+      <span>
+        <button className="button" onClick={this.openLoginForm}>Login</button>
         {isLoginOpen &&
-          <Modal className="login-modal center-content__medium" onCloseModal={this.closeLoginForm}>
+          <Modal className="sign-modal center-content__medium" onCloseModal={this.closeLoginForm}>
             <LoginForm />
           </Modal>}
-      </div>
+      </span>
     );
   }
 }
