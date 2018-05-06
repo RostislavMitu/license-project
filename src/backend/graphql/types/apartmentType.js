@@ -17,6 +17,9 @@ export default new GraphQLObjectType({
       title: {
         type: GraphQLString
       },
+      city: {
+        type: GraphQLString
+      },
       rooms: {
         type: GraphQLInt
       },

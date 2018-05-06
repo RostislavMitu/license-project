@@ -2,6 +2,8 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import LoginButton from '../loginButton/loginButton';
+import RegisterButton from '../registerButton/registerButton';
+import AddApartmentButton from '../addApartmentButton/addApartmentButton';
 
 const IS_USER_LOGGED = gql`
   query isUserLogged {
@@ -18,14 +20,14 @@ const Nav = () => (
         <nav className="header__nav">
           {data.isUserLogged ? (
               <span>
-                <button className="button">Add apartment</button>
+                <AddApartmentButton />
                 <a href='/logout' className="button">Logout</a>
               </span>
             ) : (
               <span>
                 <button className="button">About Us</button>
                 <LoginButton />
-                <button className="button register-button">Register</button>
+                <RegisterButton />
               </span>
             )}
         </nav>
