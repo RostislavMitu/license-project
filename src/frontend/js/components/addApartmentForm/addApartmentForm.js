@@ -66,29 +66,29 @@ export default class AddApartmentForm extends React.Component {
     return (
       <Mutation mutation={ADD_APARTMENT}>
         {(addApartment) => (
-          <form className="sign-form">
+          <form className="form">
             <div className="input-wrapper">
               <label className="offscreen" htmlFor="title">Title</label>
-              <input id="title" className="sign-form__input" type="text" placeholder="Title" onChange={this.onTitleChange} value={this.state.title} />
+              <input id="title" className="form__input" type="text" placeholder="Title" onChange={this.onTitleChange} value={this.state.title} />
             </div>
             <div className="input-wrapper">
               <label htmlFor="city" className="offscreen">City</label>
-              <input id="city" className="sign-form__input" type="text" placeholder="City" onChange={this.onCityChange} value={this.state.city} />
+              <input id="city" className="form__input" type="text" placeholder="City" onChange={this.onCityChange} value={this.state.city} />
             </div>
             <div className="input-wrapper">
               <label htmlFor="rooms" className="offscreen">Rooms</label>
-              <input id="rooms" className="sign-form__input" type="number" placeholder="Rooms" onChange={this.onRoomsChange} value={this.state.rooms} />
+              <input id="rooms" className="form__input" type="number" placeholder="Rooms" onChange={this.onRoomsChange} value={this.state.rooms} />
             </div>
             <div className="input-wrapper">
               <label htmlFor="price" className="offscreen">Price</label>
-              <input id="price" className="sign-form__input" type="number" min="1" step="any" placeholder="Price" onChange={this.onPriceChange} value={this.state.price} />
+              <input id="price" className="form__input" type="number" min="1" step="any" placeholder="Price" onChange={this.onPriceChange} value={this.state.price} />
             </div>
             <div className="input-wrapper">
               <label htmlFor="description">Description</label>
-              <textarea id="description" className="sign-form__input" />
+              <textarea id="description" className="form__input" />
             </div>
             <div className="input-wrapper">
-              <input className="sign-form__input submit" id="add_apartment" type="button" value="Add" onClick={() => {
+              <input className="form__input submit" id="add_apartment" type="button" value="Add" onClick={() => {
                 addApartment({ variables: this.state }).then(() => window.location.reload());
               }} />
             </div>

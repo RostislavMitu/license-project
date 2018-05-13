@@ -7,7 +7,9 @@
 @import 'modules/header';
 @import 'modules/product-list';
 @import 'modules/modal';
-@import 'modules/sign';
+@import 'modules/form';
+@import 'modules/product-details';
+@import 'modules/_select.scss';
 
 html {
   font-size: 16px;

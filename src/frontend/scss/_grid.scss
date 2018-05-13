@@ -38,6 +38,10 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    &.medium-2-1 {
+      grid-template-columns: 2fr 1fr;
+    }
+
     &.medium-3 {
       grid-template-columns: repeat(3, 1fr);
     }

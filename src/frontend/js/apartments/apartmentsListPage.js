@@ -31,7 +31,7 @@ class ApartmentsListPage extends React.Component {
           <ul className="filter">
             <li>
               <label className="filter__label" htmlFor="city">City</label>
-              <select className="filter__select" id="city" value={this.state.city} onChange={this.onCityChange.bind(this)}>
+              <select className="select" id="city" value={this.state.city} onChange={this.onCityChange.bind(this)}>
                 <option value="">All</option>
                 <option value="Chisinau">Chisinau</option>
                 <option value="Cricova">Cricova</option>
@@ -40,7 +40,7 @@ class ApartmentsListPage extends React.Component {
             </li>
             <li>
               <label className="filter__label" htmlFor="beds">Beds</label>
-              <select className="filter__select" id="beds">
+              <select className="select" id="beds">
                 <option value="">All</option>
                 <option value="">1</option>
                 <option value="">2</option>
@@ -50,7 +50,7 @@ class ApartmentsListPage extends React.Component {
             </li>
             <li>
               <label className="filter__label" htmlFor="floor">Floor</label>
-              <select className="filter__select" id="floor">
+              <select className="select" id="floor">
                 <option value="">All</option>
                 <option value="">1</option>
                 <option value="">2</option>
