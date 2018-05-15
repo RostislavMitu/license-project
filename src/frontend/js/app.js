@@ -1,16 +1,18 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/header/header';
-import ApartmentsListPage from './apartments/apartmentsListPage';
+import HomePage from './components/homePage/homePage';
+import Footer from './components/footer/footer';
 import ApartmentDetails from './components/apartmentDetails/apartmentDetails';
 
 const App = () => (
   <div>
     <Header />
     <Switch>
-      <Route exact path='/' component={ApartmentsListPage}/>
+      <Route exact path='/' component={HomePage}/>
       <Route path='/:apartmentId' component={ApartmentDetails}/>
     </Switch>
+    <Footer />
   </div>
 );
 

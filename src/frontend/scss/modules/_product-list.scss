@@ -1,27 +1,43 @@
 .filter-wrapper {
 
   .filter {
-    width: 75%;
-
+    width: 30%;
+    list-style: none;
     &__label {
       display: block;
     }
+
+    &__select {
+      background: $white;
+      padding: 0 10px;
+      color: $grey;
+      display: block;
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 25px;
+      height: 35px;
+      outline: none;
+    }
   }
+}
+
+.image-page {
+    height: 100%;
+    width: 100%;
 }
 
 .product-list {
   color: $grey;
   max-width: 1100px;
   float: right;
-  margin: 0 100px 0 0;
+  margin: auto;
 
   .search-wrapper {
-    float: right;
     margin: 20px 0;
 
      input {
        border: 0;
-       border-bottom: 2px solid $monochromatic;
+       border-bottom: 2px solid $blue;
        outline: none;
        text-decoration: none;
        font-size: 16px;
@@ -52,4 +68,17 @@
       }
     }
   }
+}
+
+.search-box-container {
+  width: 700px;
+  background: hsla(0,0%,100%,.8);
+  padding: 20px;
+  margin: 100px auto;
+}
+
+.background-page {
+  background: url('/main-page.jpg') no-repeat center 90%;
+  background-size: cover;
+  height:600px;
 }
