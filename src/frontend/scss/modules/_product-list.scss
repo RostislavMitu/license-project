@@ -71,10 +71,11 @@
 }
 
 .search-box-container {
-  width: 700px;
-  background: hsla(0,0%,100%,.8);
+  width: 600px;
+  height: 170px;
+  background: hsla(0,0%,100%,.9);
   padding: 20px;
-  margin: 100px auto;
+  margin: 120px auto;
 }
 
 .background-page {
@@ -82,3 +83,39 @@
   background-size: cover;
   height:600px;
 }
+
+.rental-property {
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  position: relative;
+  left: 38px;
+  top: 14px;
+}
+
+.search-type {
+  width: 350px;
+  height: 35px;
+  font-size: 14px;
+}
+
+.city-select {
+  position: relative;
+  top: 10px;
+  width: 100px;
+}
+
+.beds-select {
+  position: relative;
+  bottom: 50px;
+  left: 120px;
+  width: 100px;
+
+}
+
+.floor-select {
+  position: relative;
+  bottom: 110px;
+  left: 240px;
+  width: 100px;
+}
+

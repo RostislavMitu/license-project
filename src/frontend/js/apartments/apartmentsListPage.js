@@ -29,13 +29,14 @@ class ApartmentsListPage extends React.Component {
       <div className="wrapper small-1">
         <div className="background-page">
           <div className="search-box-container">
+            <li className="rental-property"><a>Rental Property</a></li>
             <div className="filter-wrapper">
               <ul className="filter">
                 <div className="search-wrapper">
-                  <input type="text" placeholder="search..." value={this.state.searchQuery}
+                  <input className="search-type" type="text" placeholder="Search by city, street, number of rooms" value={this.state.searchQuery}
                          onChange={this.onSearchQueryChange.bind(this)}/>
                 </div>
-                <li>
+                <li className="city-select">
                   <select className="filter__select" id="city" value={this.state.city}
                           onChange={this.onCityChange.bind(this)}>
                     <option value="">City</option>
@@ -44,7 +45,7 @@ class ApartmentsListPage extends React.Component {
                     <option value="Balti">Balti</option>
                   </select>
                 </li>
-                <li>
+                <li className="beds-select">
                   <select className="filter__select" id="beds">
                     <option value="">Beds</option>
                     <option value="">1</option>
@@ -53,7 +54,7 @@ class ApartmentsListPage extends React.Component {
                     <option value="">4</option>
                   </select>
                 </li>
-                <li>
+                <li className="floor-select">
                   <select className="filter__select" id="floor">
                     <option value="">Floor</option>
                     <option value="">1</option>
